@@ -35,7 +35,7 @@ API.getWorkoutsInRange()
   }
 function populateChart(data) {
   let durations = duration(data);
-  let pounds = calculateTotalWeight(data);
+  let pounds = weight(data);
   let workouts = workoutNames(data);
   const colors = generatePalette();
 
@@ -190,21 +190,17 @@ function duration(data) {
   let durations = [];
 
   data.forEach(workout => {
-    workout.exercises.forEach(exercise => {
-      durations.push(exercise.duration);
-    });
+    durations.push(workout.totalDuration);
   });
 
   return durations;
 }
 
-function calculateTotalWeight(data) {
+function weight(data) {
   let total = [];
 
   data.forEach(workout => {
-    workout.exercises.forEach(exercise => {
-      total.push(exercise.weight);
-    });
+    total.push(workout.totalWeight);
   });
 
   return total;

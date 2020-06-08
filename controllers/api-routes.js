@@ -49,8 +49,13 @@ router.post("/api/workouts", ({body}, res) => {
 //get workouts for last week
 router.get("/api/workouts/range", (req, res) => {
     workout.find({day:{$gte: new Date(new Date() - 7 * 60 * 60 * 24 * 1000)}})
-    .then(workouts => {
-        res.json(workouts);
+    .limit(7)
+    .then(workout => {
+        workout.forEach(workout => {
+            workout.addDurations();
+            workout.addWeights();
+        });
+        res.json(workout);
     })
     .catch(err => {
         res.status(400).json(err);
