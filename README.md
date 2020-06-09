@@ -1,5 +1,5 @@
 
-# 17 [Workout Tracker](https://github.com/kyleres/17-Workout_Tracker)
+# 17 [Workout Tracker](https://homework-17-fitness.herokuapp.com/)
 ![GitHub forks](https://img.shields.io/github/forks/kyleres/17-Workout_Tracker?style=social)
 ![GitHub repo size](https://img.shields.io/github/repo-size/kyleres/17-Workout_Tracker)
 
@@ -16,13 +16,7 @@ For this project, we were tasked with completing a fitness tracker app using Mon
 - [Questions](#questions)
 
 ## Installation
-1. Fork this repo.
-2. Open terminal in the repo's folder.
-3. Run "mongod".
-4. Open a separate terminal in the repo's folder.
-4. Run "npm i".
-5. Run "npm start".
-6. Enter "http://localhost:5000/" in your browser.
+Live link [here](https://homework-17-fitness.herokuapp.com/).
 
 ## Usage
 To use this app, simply create a new workout and add specific exercises as you workout. You also have the option to continue a previous workout. When prompted, enter exercise-specific information. You can view your workout stats in the dashboard.
